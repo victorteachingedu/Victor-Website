@@ -1,0 +1,364 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Spooky Portfolio 🐈‍⬛</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Trebuchet MS", Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #140d24;
+            color: #f7edff;
+            line-height: 1.7;
+        }
+
+        /* Navigation */
+        header {
+            background: #0b0714;
+            padding: 22px 15px;
+            text-align: center;
+            border-bottom: 2px solid #ff8c24;
+        }
+
+        header h1 {
+            color: #ff9d2e;
+            font-size: 30px;
+            text-shadow: 0 0 12px #ff7200;
+        }
+
+        nav {
+            margin-top: 12px;
+        }
+
+        nav a {
+            display: inline-block;
+            color: #f7edff;
+            text-decoration: none;
+            margin: 5px 12px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff9d2e;
+            transform: translateY(-2px);
+        }
+
+        /* Hero section */
+        .hero {
+            min-height: 380px;
+            padding: 75px 20px;
+            text-align: center;
+            background:
+                radial-gradient(ellipse at top, #49215f 0%, #241337 45%, #140d24 100%);
+        }
+
+        .cat {
+            font-size: 65px;
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .hero h2 {
+            color: #ff9d2e;
+            font-size: clamp(28px, 5vw, 43px);
+            margin: 12px 0;
+            text-shadow: 0 0 15px #a44cff;
+        }
+
+        .hero p {
+            font-size: 17px;
+            margin: 7px 0;
+        }
+
+        .hero .subtitle {
+            color: #d8b8ff;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 22px;
+            padding: 11px 24px;
+            border-radius: 30px;
+            background: #ff8c24;
+            color: #180c25;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #ffd166;
+            box-shadow: 0 0 20px #ff8c24;
+            transform: scale(1.05);
+        }
+
+        /* Main sections */
+        section {
+            padding: 45px 20px;
+            max-width: 900px;
+            margin: auto;
+            scroll-margin-top: 20px;
+        }
+
+        section h2 {
+            color: #ff9d2e;
+            font-size: 27px;
+            margin-bottom: 18px;
+        }
+
+        section h2 span {
+            margin-right: 8px;
+        }
+
+        /* Skills */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skills span {
+            background: #2c1b42;
+            border: 1px solid #a45aff;
+            color: #f5eaff;
+            padding: 9px 17px;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        .skills span:hover {
+            background: #ff8c24;
+            color: #180c25;
+            border-color: #ff8c24;
+        }
+
+        /* Projects */
+        .project {
+            background: #211531;
+            padding: 22px;
+            margin: 18px 0;
+            border-radius: 14px;
+            border: 1px solid #49305e;
+            border-left: 4px solid #ff8c24;
+            transition: 0.3s;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px #0005;
+            border-color: #ff8c24;
+        }
+
+        .project h3 {
+            color: #d7adff;
+            margin-bottom: 8px;
+        }
+
+        /* Contact */
+        .contact {
+            background: #1d1230;
+            border-radius: 15px;
+            margin-bottom: 40px;
+        }
+
+        .contact a {
+            color: #ffad4d;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            color: #fff0c2;
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: #0b0714;
+            color: #c8b5df;
+            text-align: center;
+            padding: 22px 12px;
+            border-top: 2px solid #ff8c24;
+        }
+
+        footer span {
+            color: #ff9d2e;
+        }
+
+        /* Floating decorations */
+        .decoration {
+            position: fixed;
+            right: 18px;
+            bottom: 15px;
+            font-size: 30px;
+            opacity: 0.8;
+            pointer-events: none;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Mobile friendly */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 25px;
+            }
+
+            nav a {
+                margin: 5px 7px;
+                font-size: 14px;
+            }
+
+            .hero {
+                padding: 55px 18px;
+            }
+
+            section {
+                padding: 32px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🐈‍⬛ My Spooky Portfolio 🎃</h1>
+
+        <nav>
+            <a href="#about">About 🕸️</a>
+            <a href="#skills">Skills 🧪</a>
+            <a href="#projects">Projects 🦇</a>
+            <a href="#contact">Contact 💌</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <div class="cat">🐈‍⬛</div>
+
+        <h2>Hello, I'm Your Name! 🎃</h2>
+
+        <p class="subtitle">
+            ✨ Aspiring Web Developer ✨
+        </p>
+
+        <p>
+            Welcome to my little corner of the spooky internet!
+        </p>
+
+        <p>
+            Coding spells, building websites, and loving cats. 🧙‍♀️
+        </p>
+
+        <a href="#projects" class="button">
+            Explore My Projects 🕯️
+        </a>
+    </div>
+
+    <section id="about">
+        <h2><span>🌙</span> About Me</h2>
+
+        <p>
+            Hi there, fellow night owl! 🦇 I'm a passionate learner
+            who loves web development, cute cats, and all things Halloween.
+            I enjoy turning creative ideas into beautiful websites using
+            HTML, CSS, and JavaScript.
+        </p>
+
+        <p>
+            When I'm not coding, you can find me hanging out with cats
+            or enjoying a little spooky magic. 🐾
+        </p>
+    </section>
+
+    <section id="skills">
+        <h2><span>🧪</span> My Magic Skills</h2>
+
+        <div class="skills">
+            <span>🕸️ HTML</span>
+            <span>🎨 CSS</span>
+            <span>⚡ JavaScript</span>
+            <span>🐍 Python</span>
+            <span>🐈 Cat Appreciation</span>
+            <span>🎃 Halloween Vibes</span>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2><span>🦇</span> My Spooky Projects</h2>
+
+        <div class="project">
+            <h3>🎃 Project 1: My Personal Website</h3>
+            <p>
+                A personal website made with HTML and CSS,
+                sprinkled with a little Halloween magic!
+            </p>
+        </div>
+
+        <div class="project">
+            <h3>🐈‍⬛ Project 2: Cat Paradise</h3>
+            <p>
+                A cute website dedicated to adorable cats,
+                fluffy paws, and tiny whiskers.
+            </p>
+        </div>
+
+        <div class="project">
+            <h3>🕯️ Project 3: Spooky Landing Page</h3>
+            <p>
+                A mysterious Halloween-themed landing page
+                filled with purple colors and pumpkin vibes.
+            </p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2><span>💌</span> Send Me a Little Message</h2>
+
+        <p>
+            Have a project idea? Let's make something magical! ✨
+        </p>
+
+        <p>
+            📧 Email:
+            <a href="mailto:yourname@example.com">
+                yourname@example.com
+            </a>
+        </p>
+
+        <p>
+            🐙 GitHub:
+            <a href="https://github.com/yourusername"
+               target="_blank" rel="noopener noreferrer">
+                Visit My GitHub
+            </a>
+        </p>
+    </section>
+
+    <div class="decoration">🎃</div>
+
+    <footer>
+        <p>Made with <span>🖤</span>, cats, and a little spooky magic.</p>
+        <p>© 2026 Your Name | Happy Halloween! 🐈‍⬛</p>
+    </footer>
+
+</body>
+</html>
